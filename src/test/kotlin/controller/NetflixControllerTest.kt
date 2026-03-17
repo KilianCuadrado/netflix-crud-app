@@ -7,6 +7,7 @@ import org.junit.jupiter.api.DisplayName
 import org.junit.jupiter.api.Test
 import kotlin.test.assertEquals
 import kotlin.test.assertNotNull
+import kotlin.test.assertFalse
 import kotlin.test.assertTrue
 
 @DisplayName("Netflix Controller Tests")
@@ -93,7 +94,7 @@ class NetflixControllerTest {
 
         assertTrue(result.contains("Matrix"))
         assertTrue(result.contains("Inception"))
-        assertTrue(!result.contains("Breaking Bad"))
+        assertFalse(result.contains("Breaking Bad"))
     }
 
     @Test
@@ -102,7 +103,7 @@ class NetflixControllerTest {
         val result = controller.buscarMediaPerTipus(MediaType.TV_SHOW)
 
         assertTrue(result.contains("Breaking Bad"))
-        assertTrue(!result.contains("Matrix"))
+        assertFalse(result.contains("Matrix"))
     }
 
     @Test
