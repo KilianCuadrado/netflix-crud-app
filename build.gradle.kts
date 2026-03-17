@@ -17,7 +17,7 @@ tasks.withType<JavaExec> {
 }
 
 plugins {
-    kotlin("jvm") version "1.9.21"
+    kotlin("jvm") version "2.2.0"
     application // Necessari per executar la GUI fàcilment
     id("org.openjfx.javafxplugin") version "0.1.0" // Versió actualitzada
 }
@@ -41,7 +41,7 @@ dependencies {
 }
 
 kotlin {
-    jvmToolchain(20)
+    jvmToolchain(17)
 }
 
 application {
